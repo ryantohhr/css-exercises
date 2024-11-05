@@ -89,3 +89,69 @@
   font-size: 13px;
   font-weight: normal;
 }
+
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-area: header;
+}
+
+.logo {
+  justify-self: start;
+}
+
+.menu > ul {
+  display: grid;
+  list-style-type: none;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  gap: 50px;
+  grid-area: sidebar;
+}
+
+.nav > ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  grid-area: article;
+}
+
+.card {
+  height: 200px;
+}
+
+.card p {
+  padding: 5px;
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.container {
+  display: grid;
+  gap: 3px;
+  grid-template-columns: 1fr 4fr;
+  grid-template-areas: 
+    "header header"
+    "sidebar nav"
+    "sidebar article"
+    "footer footer";
+}
+
+.footer {
+  grid-area: footer;
+}
